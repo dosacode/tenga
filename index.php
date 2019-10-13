@@ -10,7 +10,7 @@
           <th>本の名前</th>
           <th>著者名</th>
       </tr>
-  </thaed>
+  </thead>
   <tbody>
     <tr>
         <td></td>
