@@ -1,5 +1,48 @@
 <!-- 一覧画面 -->
+<?php
 
+    function getRecord(){
+
+        /*try-catchはTRYでERROR出たらCATCHにとぶ*/
+        try{
+        const DB_HOST = 'localhost';
+        const DB_NAME = 'book_management';
+        const DB_USER = 'root';
+        const DB_PASS = 'root';
+    
+            /*DSN指定、接続文字列*/
+
+
+            /*眠いから解説ここまで、明日ちゃんと書く*/
+
+            
+        $dsn = sprintf("mysql:host=%s;dbname=%s", DB_HOST, DB_NAME);
+
+        $pdo = new PDO($dsn, DB_USER, DB_PASS);
+
+        $sql = "SELECT book_name, wrote_by, bought_at, price from 'book";
+
+        $stmt = $pdo->query($sql);
+
+        $books = [];
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $books[]=$row;
+        }
+
+        $stmt = null;
+
+        /*$eってなんだっけ*/
+
+    } catch (PDOEqception $e) {
+        exit($e->getMessage());
+    }
+
+}
+
+$books = getRecord();
+
+?>
 
 <!DOCTYPE html>
     <html lang="ja">
@@ -25,18 +68,10 @@
             
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $book[0]; ?></td>
+                    <td><?php echo $book[1]; ?></td>
+                    <td><?php echo $book[2]; ?></td>
+                    <td><?php echo $book[3]; ?></td>
                 </tr>
             </tbody>
         </table>

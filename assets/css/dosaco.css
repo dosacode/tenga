@@ -1,7 +1,14 @@
+.c-heading__01{
+    font-size: 36px;
+    color: #333;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid;
+    border-bottom-color: #b9555e;
 }
 
 .c-nav__list li {
