@@ -1,10 +1,17 @@
 SQL ORACLE
 まとめ方がわからないので、とりあえず雑記
 
-うんこわからない
 https://ping-t.com/mondai3/mondais/index
 
-問題ID： 19640
+問題ID： 19640　うんこわからない
 
 問題ID： 19517 理解
 where句　構文エラーになる→SELECT employee_name, salary FROM employees WHERE 300000 <= salary <= 600000;
+
+問題ID： 19622   わからん
+グループ関数に対する条件指定はwhereではなくhaving　理解
+HAVING句に列別名を指定することはできない　以下がわからん
+問題の回答もgroupに指定していない列をhavingしてる。問題はSUM指定だからおkってこと？
+参考　https://codeday.me/jp/qa/20190119/141022.html
+多分ここ→SELECT句はGROUP BY句の後に論理的に処理されるため
+わけわからん、用解説
