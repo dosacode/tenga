@@ -34,7 +34,7 @@
 
         /*$eってなんだっけ*/
 
-    } catch (PDOEqception $e) {
+    } catch (PDOException $e) {
         exit($e->getMessage());
     }
 
