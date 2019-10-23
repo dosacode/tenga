@@ -17,5 +17,7 @@
             <p>ページ数<input type="text" name="page"></p>
             <p>NDC分類(10版)<input type="text" name="ndc"></p>
             <input type="submit" value="送信">
-        </body>
+        </form>     
+    </header>
+</body>
 </html>
