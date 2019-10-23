@@ -3,7 +3,9 @@
 
     function getRecord(){
 
-        /*try-catchはTRYでERROR出たらCATCHにとぶ*/
+            /* try-catchはTRYでERROR出たらCATCHにとぶ
+            const定数、DB接続に必要な情報 */
+
         try{
         const DB_HOST = 'localhost';
         const DB_NAME = 'book_management';
@@ -12,27 +14,47 @@
     
             /*DSN指定、接続文字列*/
 
+            /* %フォーマット演算子
+            host=%sの(%s)には、DB_HOST
+            dbname=%sの(%s)には、DB_NAME */
 
-            /*眠いから解説ここまで、明日ちゃんと書く*/
-
-            
         $dsn = sprintf("mysql:host=%s;dbname=%s", DB_HOST, DB_NAME);
+
+            /* PDOインスタンス化
+            PHPでDBを使うためのオブジェクト(クラス)
+            ($pdo = new PDO)→実体化 = インスタンス化 
+            クラス = 設計図(こんな関数がありますよ)*/
 
         $pdo = new PDO($dsn, DB_USER, DB_PASS);
 
         $sql = "SELECT book_name, wrote_by, bought_at, price from 'book";
 
+            /* statment=処理内容
+            ($sql)をqueryに渡す
+            実体化はアロー(->)で作られる　動的関数
+            設計図としてのPDO(::)←スコープ　静的関数
+            下のここで使われてる
+
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $books[]=$row;　*/
+
         $stmt = $pdo->query($sql);
 
+            /* 空っぽの配列に入った */
+
         $books = [];
+
+            /* (PDO::FETCH_ASSOC)→設計図としてのPDO*/
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $books[]=$row;
         }
 
+            /* 解放する */
+        　
         $stmt = null;
 
-        /*$eってなんだっけ*/
+        /* $eってなんだっけ。うんこわからない */
 
     } catch (PDOException $e) {
         exit($e->getMessage());
