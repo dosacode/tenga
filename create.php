@@ -1,4 +1,12 @@
 <!-- 新規作成 -->
+<?php
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
