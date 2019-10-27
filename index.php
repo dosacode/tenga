@@ -55,12 +55,15 @@
             $stmt = null;
 
                 /* $eってなんだっけ。うんこわからない */
-            } catch (PDOException $e) {
-                exit($e->getMessage());
-            }
-        }
-        
-        $books = getRecord();
+
+    } catch (PDOException $e) {
+        exit($e->getMessage());
+    }
+
+}
+
+$books = getRecord();
+
 ?>
 
 <!DOCTYPE html>
