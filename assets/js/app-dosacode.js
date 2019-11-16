@@ -8,6 +8,12 @@ $(function (){
   **/  
   function headerColorchange () {
 
+    var
+      element = $('.js-header-color-change'),
+      addStyle = 'is-change'
+    element.addClass(addStyle) 
+
+
   }
   headerColorchange()
 

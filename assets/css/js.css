@@ -36,9 +36,13 @@ body {
   height: 100px;
   width: 100vw;
   background: #ddd;
+  transition: 4s ease;
   border-bottom: 1px solid #ddd;
 }
 
+.header.is-change {
+  background: #04B4AE;
+}
 
 .c-heading__01 {
   padding: 20px;
