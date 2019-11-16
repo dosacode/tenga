@@ -1,11 +1,9 @@
 <!-- 新規作成 -->
 <?php
 
+    // post だったら 新規とうろく
+    
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -17,6 +15,7 @@
 </head>
 
 <body>
+
     <header>
         <form method="POST" action="create.php">
             <p>本の名前<input type="text" name="booktitle"></p>
