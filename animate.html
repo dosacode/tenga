@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- ここて jqueryを読み込ませます-->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/app.js"></script>
+  
+  <link rel="stylesheet" href="/assets/css/js.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <!--
+    **jsを用いて操作する部分に
+    [js-**]という接頭辞をつけて、明示的にしています。
+    [c-**]はComponentの[c]であり再利用性のあるパーツとして定義
+  -->
+  <header class="header js-header-color-change"></header>
+  <div class="container js-bg-color-change">
+    <h1 class="c-heading__01 js-heading-fadein">Fade in 見出し</h1>
+  </div>
+  
+</body>
+</html>
