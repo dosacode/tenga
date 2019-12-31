@@ -1,0 +1,93 @@
+
+/* 初期設定、ブラウザ間の異なるスタイルをリセット！ */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+/* テーブルのスタイリング */
+
+.c-table__normal {
+  min-width: 940px;
+}
+
+.c-table__wrapper {
+  position: relative;
+}
+
+/* ボタンを囲む箱を固定するためのスタイリング
+** position: absolute;をつけることで、
+** 親要素にいるposition:relativeがついている要素に対して
+** 絶対値で配置されるよ！
+*/
+
+.c-btn__container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+/* ボタンの親要素！
+** ul、すなわちリスト要素をつかっているよ！
+** 理由はなんとなく！オッケー！
+*/
+
+.c-btn__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ボタンをリスト使っているからね！
+** 隣り合っていても少しの距離がわたしたちには必要
+** それが10pxなの
+*/
+
+.c-btn__list li {
+  margin: 0 10px;
+}
+
+/* ボタンそのもののスタイリングなんだ！
+** 共通するスタイルを一つのクラスにまとめておくことで、
+** 何度も同じスタイルを書く必要がないよ！！
+** ばかは何度でもかくよ！！
+*/
+
+
+.c-btn__normal {
+  display: block;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* 削除ボタンのスタイリング！
+** 削除ボタンだから赤にしてあるよ！単純！！うふふ！
+*/
+
+.c-btn__delete {
+  color: #fff;
+  background: #c33;
+}
+
+/* 編集ボタンのスタイリング！
+** 編集ボタンだから色は適当なの！！ラッキー！！
+*/
+
+.c-btn__edit {
+  color: #fff;
+  background: #666;
+}
