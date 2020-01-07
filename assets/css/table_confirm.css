@@ -1,0 +1,147 @@
+
+/* 初期設定、ブラウザ間の異なるスタイルをリセット！ */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+
+.table-cnt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.table-nav {
+  width: 250px;
+  height: 100vh;
+  background: #eee;
+}
+
+.table-nav ul li{
+  width: 100%;
+}
+
+.table-wrapper {
+  width: calc(100% - 250px);
+  padding-top: 100px;
+
+}
+
+.table-container {
+  overflow: scroll;
+  position: relative;
+  max-height: 300px;
+}
+
+.table {
+  min-width: 1280px;
+}
+
+.table thead, 
+.table tbody {
+  display: block;
+}
+
+.table thead{
+  position: sticky;
+  top: 0;
+}
+
+.table thead th {
+  width: 140px;
+  background: #ddd;
+  word-break: break-word;
+  font-size: 14px;
+  font-weight: bold;
+}
+.table tbody td{
+  width: 140px;
+  padding: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: #fff;  
+  word-break: break-word;
+}
+
+
+/* テーブルのスタイリング */
+
+
+/* ボタンを囲む箱を固定するためのスタイリング
+** position: absolute;をつけることで、
+** 親要素にいるposition:relativeがついている要素に対して
+** 絶対値で配置されるよ！
+*/
+
+.button-container {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+
+/* ボタンの親要素！
+** ul、すなわちリスト要素をつかっているよ！
+** 理由はなんとなく！オッケー！
+*/
+
+.c-btn__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+/* ボタンをリスト使っているからね！
+** 隣り合っていても少しの距離がわたしたちには必要
+** それが10pxなの
+*/
+
+.c-btn__list li {
+  margin: 0 10px;
+}
+
+/* ボタンそのもののスタイリングなんだ！
+** 共通するスタイルを一つのクラスにまとめておくことで、
+** 何度も同じスタイルを書く必要がないよ！！
+** ばかは何度でもかくよ！！
+*/
+
+
+.c-btn__normal {
+  display: block;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* 削除ボタンのスタイリング！
+** 削除ボタンだから赤にしてあるよ！単純！！うふふ！
+*/
+
+.c-btn__delete {
+  color: #fff;
+  background: #c33;
+}
+
+/* 編集ボタンのスタイリング！
+** 編集ボタンだから色は適当なの！！ラッキー！！
+*/
+
+.c-btn__edit {
+  color: #fff;
+  background: #666;
+}
