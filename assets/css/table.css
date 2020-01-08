@@ -22,6 +22,8 @@ html,body {
   overflow-x: scroll;
 }
 
+
+
 .c-table__normal {
   table-layout: fixed;
   min-width: 100%;
@@ -33,6 +35,8 @@ html,body {
   /* 子要素が絶対値をこのクラスから取るよという定義 */
   padding-top: 100px;
   /* 内に100px上にあけるよという定義 */
+  padding-right: 200px;
+  /* 内に100px右にあけるよという定義 */
 }
 
 /* ボタンを囲む箱を固定するためのスタイリング
@@ -44,10 +48,13 @@ html,body {
 .c-btn__container {
   position: absolute;
   /* ↑親要素から絶対値にするよという定義 */
-  top: 20px;
+  top: 100px;
   /* ↑親要素の上から何px離すかを定義 */
   right: 20px;
+  background: #ddd;
   /* ↑親要素の右から何px離すかを定義 */
+  padding-top: 50px;
+  /* 内に50px上にあけるよという定義 */
 }
 
 
@@ -57,19 +64,29 @@ html,body {
 */
 
 .c-btn__list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
   list-style: none;
 }
-
 /* ボタンをリスト使っているからね！
 ** 隣り合っていても少しの距離がわたしたちには必要
 ** それが10pxなの
 */
 
-.c-btn__list li {
+.c-btn__list > li {
+  margin:0 10px 18px 10px;
+  display: block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 21px;
+}
+
+
+.c-btn__list__child {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+.c-btn__list__child > li {
   margin: 0 10px;
 }
 
