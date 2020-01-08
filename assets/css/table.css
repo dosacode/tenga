@@ -30,6 +30,9 @@ html,body {
 
 .c-table__wrapper {
   position: relative;
+  /* 子要素が絶対値をこのクラスから取るよという定義 */
+  padding-top: 100px;
+  /* 内に100px上にあけるよという定義 */
 }
 
 /* ボタンを囲む箱を固定するためのスタイリング
@@ -40,8 +43,11 @@ html,body {
 
 .c-btn__container {
   position: absolute;
+  /* ↑親要素から絶対値にするよという定義 */
   top: 20px;
+  /* ↑親要素の上から何px離すかを定義 */
   right: 20px;
+  /* ↑親要素の右から何px離すかを定義 */
 }
 
 
@@ -55,6 +61,7 @@ html,body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  list-style: none;
 }
 
 /* ボタンをリスト使っているからね！
