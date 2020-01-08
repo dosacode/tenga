@@ -17,8 +17,15 @@ html,body {
 
 /* テーブルのスタイリング */
 
+.flag-table {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
 .c-table__normal {
-  min-width: 940px;
+  table-layout: fixed;
+  min-width: 100%;
+  /* min-width: 940px; */
 }
 
 .c-table__wrapper {
