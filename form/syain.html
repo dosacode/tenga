@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<meta charset="UTF-8">
+<title>入社登録票：社員・アルバイト</title>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header"> <a href="http://www.ever-effort.com/" target="_blank"><img src="images/logo.png" width="167" height="76" alt=""/></a>
+  <p class="title">Wi-Fiに接続されている場合、上手く反映されない可能性があるので、<br>
+必ずWi-Fiはつながっていない状況で提出をしてください。<br>
+また、記入ミスがないようお願い致します。</p>
+  </div>
+
+<form action="mail7.php" method="post">
+
+<p>入社日</p>
+<input type="date" name="入社日"required>
+
+  <p>お名前</p>
+  <textarea class="name" name="お名前"required></textarea><br>
+  
+   <p>フリガナ</p>
+ <textarea class="name" name="フリガナ"required></textarea><br>
+  
+ 
+<p>雇用形態</p>
+<input type="radio" name="雇用形態" value="社員"required>社員
+<input type="radio" name="雇用形態" value="アルバイト">アルバイト
+</p>
+
+<p>生年月日</p>
+<input type="date" name="生年月日"required>
+
+   <p>連絡先</p>
+  <input type="text"size="40" name="連絡先">
+  
+   <p>郵便番号</p>
+  <input type="text"size="40" name="郵便番号">
+
+   <p>住所</p>
+  <input type="text"size="40" name="住所">
+　
+   <p>マンション・アパート名、部屋番号<br>
+    <font color="red">マンション名等がある場合は、必ず記入をお願い致します。</font></p>
+  <input type="text"size="40" name="マンション・アパート名、部屋番号">
+
+   <p>最寄駅<br>
+      <font color="red">バス利用者の方は、バスの区間もご記入下さい。</font></p>
+  <input type="text"size="40" name="最寄駅">
+ <br>
+ <br>
+ 
+<b>緊急連絡先</b><br>
+<font color="red">※必ずご連絡が取れる連絡先のご記入下さい。<br>
+また、連絡先は2名のご記入をお願い致します。</font>
+   
+   <p>名前①</p>
+  <input type="text"size="40" name="緊急連絡先氏名1">
+  
+    <p>フリガナ</p>
+  <input type="text"size="40" name="フリガナ">
+  
+    <p>続柄</p>
+  <input type="text"size="40" name="続柄">
+  
+    <p>連絡先</p>
+  <input type="text"size="40" name="連絡先">
+  
+      <p>郵便番号</p>
+  <input type="text"size="40" name="郵便番号">
+
+    <p>住所</p>
+  <input type="text"size="40" name="住所">
+  
+      <p>マンション・アパート名、部屋番号</p>
+  <input type="text"size="40" name="マンション・アパート名、部屋番号">
+  
+      <p>名前②</p>
+  <input type="text"size="40" name="緊急連絡先氏名2">
+  
+      <p>フリガナ</p>
+  <input type="text"size="40" name="フリガナ">
+  
+      <p>続柄</p>
+  <input type="text"size="40" name="続柄">
+  
+    <p>連絡先</p>
+  <input type="text"size="40" name="連絡先">
+  
+  <br>
+  <br>
+  <b>口座番号(給与振込口座)</b><br>
+      <p>口座名義<font color="red">※半角カタカナ</font></p>
+  <input type="text"size="40" name="口座名義">
+  
+      <p>金融機関名</p>
+  <input type="text"size="40" name="金融機関名">
+  
+      <p>金融機関コード</p>
+  <input type="text"size="40" name="金融機関コード">
+  
+      <p>支店名</p>
+  <input type="text"size="40" name="支店名">
+  
+      <p>支店番号</p>
+  <input type="text"size="40" name="支店番号">
+  
+   <p>口座番号</p>
+  <input type="radio" name="口座番号" value="普通"required>普通
+<input type="radio" name="口座番号" value="当座">当座
+</p>
+
+      <p>口座種別</p>
+  <input type="text"size="40" name="口座種別">
+
+<br>
+<br>
+<br>
+
+
+<button type="submit" value="確認する" class="submit">確認する</button>
+<input type="reset"  class="reset" value="リセット（クリア）" onclick="return confirm('リセットボタンがクリックされました。本当に入力内容を削除してもよろしいですか？');" /></form>
+</div>
+</body>
+</html>
