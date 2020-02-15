@@ -28,6 +28,8 @@
 
 @media screen and (min-width:769px) {
   /* 画面サイズが769pxから適用される */
-  background: #000;
+  .content-wrapper {
+    background: #000;
+  }
 
 }
