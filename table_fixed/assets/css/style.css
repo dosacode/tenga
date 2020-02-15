@@ -29,6 +29,10 @@
   .content-wrapper .table {
     min-width: 1000px;
   }
-  
+}
+
+@media screen and (min-width:769px) {
+  /* 画面サイズが769pxから適用される */
+  background: #000;
 
 }
