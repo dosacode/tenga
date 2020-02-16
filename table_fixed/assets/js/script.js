@@ -1,17 +1,8 @@
 
 
 $(()=> {
-  const cell = $('.js-cell-fixed'),
-  const secondCell = $('.is-second')
-  cell.each(function(index) {
-    const height = $(this).offset().top
-    const left = $(this).offset().left
-    $(this).css('top',height)
-    $(this).css('left',left)
-    console.log(height)
-  });
-
-  secondCell.each(function( ) {
-    $(this).css('marginLeft', 0)
-  })
+  $('#bottomRightArea').scroll(function(e) {
+    $('#bottomLeftArea').scrollTop($(this).scrollTop()); // 左下のDIVのスクロール位置を更新
+    $('#topRightArea').scrollLeft($(this).scrollLeft()); // 右上のDIVのスクロール位置を更新
+});
 })

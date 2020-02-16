@@ -1,66 +1,42 @@
-
-.content-wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
+#fixedTableArea {
   width: 640px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  height: 200px;
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid #333;
+  background: #333;
+}
+
+#bottomLeftArea {
+  float: left;
+  height: 170px;
+  overflow: hidden;
+}
+#bottomRightArea {
+  width: 400px;
+  height: 170px;  
   overflow: scroll;
-  background: #eee;
 }
 
-.content-wrapper .table {
-  min-width: 1000px;
+.fixedTable {
+  border-collapse: collapse;
 }
-
-.table thead tr,
-.table tbody tr {
-  position: relative;
+.fixedTable td {
+  border: 1px solid #888;
+  min-width: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+  background: #ddd;
 }
-
-.js-cell-fixed {
-  position: absolute;
-  top: auto;
-  left: auto;
+.fixedTable td.dummyColumn {
+  width: 17px;
+  border: 0px;
+  opacity: 0;
 }
-
-.js-cell-fixed.is-first {
-  width: 100px;
-  background-color: #ddd !important;
-  z-index: 9;
-  color: #333 !important;
-}
-
-.js-cell-fixed.is-second {
-  width: 100px;
-  background-color: #333 !important;
-  z-index: 9;
-  margin-left: 100px;
-}
-
-.static-start {
-  left: 200px;
-  position: relative;
-}
-
-
-@media screen and (max-width:768px) {
-  /* 画面サイズが768pxまで */
-
-  .content-wrapper {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #333;
-    overflow: scroll;
-    background: #ddd;
-  }
-  
-}
-
-@media screen and (min-width:769px) {
-  /* 画面サイズが769pxから適用される */
-  .content-wrapper {
-    background: #000;
-  }
-
+.fixedTable td.dummyRow {
+  height: 18px;
+  border: 0px;
+  opacity: 0;
 }
