@@ -13,6 +13,37 @@
   min-width: 1000px;
 }
 
+.table thead tr,
+.table tbody tr {
+  position: relative;
+}
+
+.js-cell-fixed {
+  position: absolute;
+  top: auto;
+  left: auto;
+}
+
+.js-cell-fixed.is-first {
+  width: 100px;
+  background-color: #ddd !important;
+  z-index: 9;
+  color: #333 !important;
+}
+
+.js-cell-fixed.is-second {
+  width: 100px;
+  background-color: #333 !important;
+  z-index: 9;
+  margin-left: 100px;
+}
+
+.static-start {
+  left: 200px;
+  position: relative;
+}
+
+
 @media screen and (max-width:768px) {
   /* 画面サイズが768pxまで */
 
