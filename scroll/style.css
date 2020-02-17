@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.table-container {
+  overflow: scroll;
+  padding: 10px;
+  transition: .2s ease background;
+}
+
+
+/* ブラウザサイズがPC時の横幅*/
+@media screen and (min-width:769px){
+  .table-container {
+    background: #ddd;
+    width: 1000px;    
+  }
+}
+
+/* ブラウザサイズがSP時の横幅*/
+@media screen and (max-width:768px) {
+  .table-container {
+    width: 100%;
+    background: #f00;;
+  }
+}  
+
+
+/*
+tableの最小横幅
+*/
+.table {
+  min-width: 1200px;
+}
+
